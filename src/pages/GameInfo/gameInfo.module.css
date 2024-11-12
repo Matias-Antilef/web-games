@@ -1,0 +1,167 @@
+.container {
+  background-color: var(--color1);
+}
+
+.front_page_image {
+  width: 100%;
+  height: 90vh;
+  display: block;
+  object-fit: cover;
+}
+
+.title_rating {
+  font-size: 2rem;
+  color: orange;
+}
+
+.porcentaje_rating {
+  font-size: 1.5rem;
+}
+.web_site {
+  font-size: 4rem;
+  color: white;
+  font-weight: 600;
+
+  &:hover {
+    color: orangered;
+  }
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 10vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 1rem;
+  background: linear-gradient(
+    to left bottom,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.7) 80%
+  );
+
+  & ul {
+    display: flex;
+    gap: 10rem;
+    flex-wrap: wrap;
+  }
+  & a {
+    margin: 0;
+    font-size: 4rem;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem 3rem;
+  height: max-content;
+  margin: 5rem auto;
+  align-items: center;
+  gap: 3rem;
+  & h2 {
+    padding-bottom: 1rem;
+  }
+
+  & img {
+    max-height: 100%;
+    max-width: 80vw;
+    width: 100%;
+    object-fit: cover;
+    border: 0.2rem solid gray;
+    border-radius: 10%;
+  }
+}
+.description_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.carousel_container {
+  padding-bottom: 5rem;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+  & img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+  }
+}
+.screenshots {
+  height: 100%;
+  border-radius: 1rem;
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+
+.indicators {
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  align-items: center;
+}
+.indicator {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px #555;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+.indicator_select {
+  background-color: orange;
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+@media ((min-width: 300px) and (max-width:1300px)) {
+  p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .web_site {
+    font-size: 3rem;
+  }
+  .overlay {
+    & ul {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+  }
+  .description {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    height: max-content;
+
+    & img {
+      max-height: 60vh;
+      height: 100%;
+    }
+  }
+
+  .indicator {
+    height: 0.8rem;
+    width: 0.8rem;
+  }
+}
